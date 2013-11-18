@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CS4400
 {
@@ -15,6 +16,11 @@ namespace CS4400
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void LogInClicked(object sender, EventArgs e)
+        {
+            Debug.WriteLine("HELLLLL YEAHHHHH!!!");
         }
     }
 }
