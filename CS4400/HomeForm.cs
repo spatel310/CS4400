@@ -54,12 +54,14 @@ namespace CS4400
 
         private void DropoffsClicked(object sender, EventArgs e)
         {
-
+            Program.HomeForm.Hide();
+            Program.BagDropoff.Show();
         }
 
         private void ClientsClicked(object sender, EventArgs e)
         {
-
+            Program.HomeForm.Hide();
+            Program.SearchClientList.Show();
         }
 
         private void ServiceReportClicked(object sender, EventArgs e)
