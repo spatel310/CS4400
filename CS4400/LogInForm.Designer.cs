@@ -1,6 +1,6 @@
 ﻿namespace CS4400
 {
-    partial class Form1
+    partial class LogInForm
     {
         /// <summary>
         /// Required designer variable.
@@ -59,16 +59,17 @@
             this.Username.TabIndex = 2;
             this.Username.Text = "username";
             // 
-            // Form1
+            // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 403);
+            this.ClientSize = new System.Drawing.Size(834, 412);
             this.Controls.Add(this.Username);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.LogIn);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "LogInForm";
+            this.Text = "LogInForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,5 +81,6 @@
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.TextBox Username;
     }
+
 }
 

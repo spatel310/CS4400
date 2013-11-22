@@ -11,9 +11,9 @@ using System.Diagnostics;
 
 namespace CS4400
 {
-    public partial class Form1 : Form
+    public partial class LogInForm : Form
     {
-        public Form1()
+        public LogInForm()
         {
             InitializeComponent();
         }
@@ -21,6 +21,9 @@ namespace CS4400
         private void LogInClicked(object sender, EventArgs e)
         {
             Debug.WriteLine("HELLLLL YEAHHHHH!!!");
+            Program.LogInForm.Hide();
+            Program.HomeForm.Show();
         }
+
     }
 }
