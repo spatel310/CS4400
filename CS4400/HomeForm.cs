@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace CS4400
 {
+
+    /// <summary>
+    /// Weoajf;woiejaw;eiba'iwoe;flajhwefn;[a;owiej;aweoritTYLERWASHERE
+    /// </summary>
     public partial class HomeForm : Form
     {
         public HomeForm()
