@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace CS4400
 {
+    //this is the bag list
     public partial class BagList : Form
     {
         public BagList()
