@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace CS4400
 {
@@ -13,7 +15,17 @@ namespace CS4400
         /// </summary>
         /// 
         
+        ///DB STUFF
+        public static MySqlConnection connection;
+        public static string server = "academic-mysql.cc.gatech.edu";
+        public static string database = "cs4400_Group_18";
+        public static string uid = "cs4400_Group_18";
+        private static string password = "46mFV3YJ";
+        public static string connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+        public static bool isOpen = false;
 
+        
+        ///Program stuff
         public static LogInForm LogInForm;
         public static HomeForm HomeForm;
         public static MainForm MainForm;
@@ -25,6 +37,16 @@ namespace CS4400
         [STAThread]
         static void Main()
         {
+
+
+            //db stuff
+
+
+            connection = new MySqlConnection(connectionString);
+          //  OpenConnection();
+           // List<string> holder = Select();
+            //CloseConnection();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -55,6 +77,89 @@ namespace CS4400
             SearchClientList.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
             Application.Run(MainForm);
+        }
+        //open connection to database
+        public static bool OpenConnection()
+        {
+            try
+            {
+                connection.Open();
+                Debug.WriteLine("this worked");
+                isOpen = true;
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                //When handling errors, you can your application's response based 
+                //on the error number.
+                //The two most common error numbers when connecting are as follows:
+                //0: Cannot connect to server.
+                //1045: Invalid user name and/or password.
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        break;
+
+                    case 1045:
+                        MessageBox.Show("Invalid username/password, please try again");
+                        break;
+                }
+                return false;
+            }
+        }
+
+        //Close connection
+        public static bool CloseConnection()
+        {
+            try
+            {
+                connection.Close();
+                isOpen = false;
+                return true;
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+        public static List<string> Select()
+        {
+
+            string query = "SELECT * FROM Bag";
+
+            //Create a list to store the result
+            List<string> list = new List<string>();
+
+            //Open connection
+            if (isOpen == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                int i = 0;
+                while (dataReader.Read())
+                {
+                    list.Add(dataReader["Name"] + "");
+                    Debug.Print(list.ElementAt(i));
+                    i++;
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+
+                //return list to be displayed
+                return list;
+            }
+            else
+            {
+                return list;
+            }
         }
     }
 }

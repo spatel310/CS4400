@@ -28,19 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.ReturnHome = new System.Windows.Forms.Button();
+            this.PickUpSignInListTable = new System.Windows.Forms.DataGridView();
+            this.EnterDay = new System.Windows.Forms.Button();
+            this.DayNumber = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PickUpSignInListTable)).BeginInit();
             this.SuspendLayout();
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(139, 124);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // ReturnHome
             // 
@@ -52,16 +45,44 @@
             this.ReturnHome.UseVisualStyleBackColor = true;
             this.ReturnHome.Click += new System.EventHandler(this.ReturnHomeClicked);
             // 
+            // PickUpSignInListTable
+            // 
+            this.PickUpSignInListTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PickUpSignInListTable.Location = new System.Drawing.Point(139, 161);
+            this.PickUpSignInListTable.Name = "PickUpSignInListTable";
+            this.PickUpSignInListTable.Size = new System.Drawing.Size(150, 150);
+            this.PickUpSignInListTable.TabIndex = 2;
+            // 
+            // EnterDay
+            // 
+            this.EnterDay.Location = new System.Drawing.Point(164, 82);
+            this.EnterDay.Name = "EnterDay";
+            this.EnterDay.Size = new System.Drawing.Size(75, 23);
+            this.EnterDay.TabIndex = 3;
+            this.EnterDay.Text = "Enter Day";
+            this.EnterDay.UseVisualStyleBackColor = true;
+            this.EnterDay.Click += new System.EventHandler(this.EnterDayClicked);
+            // 
+            // DayNumber
+            // 
+            this.DayNumber.Location = new System.Drawing.Point(257, 84);
+            this.DayNumber.Name = "DayNumber";
+            this.DayNumber.Size = new System.Drawing.Size(32, 20);
+            this.DayNumber.TabIndex = 4;
+            // 
             // PickupSignInList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 512);
+            this.Controls.Add(this.DayNumber);
+            this.Controls.Add(this.EnterDay);
+            this.Controls.Add(this.PickUpSignInListTable);
             this.Controls.Add(this.ReturnHome);
-            this.Controls.Add(this.checkBox1);
             this.Name = "PickupSignInList";
             this.Text = "PickupSignInList";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.PickUpSignInListTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -69,7 +90,9 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button ReturnHome;
+        private System.Windows.Forms.DataGridView PickUpSignInListTable;
+        private System.Windows.Forms.Button EnterDay;
+        private System.Windows.Forms.TextBox DayNumber;
     }
 }

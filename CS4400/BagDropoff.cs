@@ -12,15 +12,23 @@ namespace CS4400
 {
     public partial class BagDropoff : Form
     {
+
         public BagDropoff()
         {
             InitializeComponent();
         }
-
+        
         private void ReturnHomeClicked(object sender, EventArgs e)
         {
             Program.BagDropoff.Hide();
+
+            Program.OpenConnection();
+            Program.Select();
+            Program.CloseConnection();
+
+
             Program.HomeForm.Show();
+
         }
     }
 }
