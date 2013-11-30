@@ -47,9 +47,13 @@
             // 
             // PickUpSignInListTable
             // 
+            this.PickUpSignInListTable.AllowUserToAddRows = false;
+            this.PickUpSignInListTable.AllowUserToDeleteRows = false;
             this.PickUpSignInListTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PickUpSignInListTable.Location = new System.Drawing.Point(139, 161);
             this.PickUpSignInListTable.Name = "PickUpSignInListTable";
+            this.PickUpSignInListTable.ReadOnly = true;
+            this.PickUpSignInListTable.ShowEditingIcon = false;
             this.PickUpSignInListTable.Size = new System.Drawing.Size(150, 150);
             this.PickUpSignInListTable.TabIndex = 2;
             // 

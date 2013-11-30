@@ -50,6 +50,7 @@
             this.Password.Size = new System.Drawing.Size(100, 20);
             this.Password.TabIndex = 1;
             this.Password.Text = "password";
+            this.Password.UseSystemPasswordChar = true;
             // 
             // Username
             // 
