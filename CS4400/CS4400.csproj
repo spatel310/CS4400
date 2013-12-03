@@ -75,6 +75,12 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PickupConfirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickupConfirmation.Designer.cs">
+      <DependentUpon>PickupConfirmation.cs</DependentUpon>
+    </Compile>
     <Compile Include="PickupSignInList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickupConfirmation.resx">
+      <DependentUpon>PickupConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PickupSignInList.resx">
       <DependentUpon>PickupSignInList.cs</DependentUpon>

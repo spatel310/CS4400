@@ -49,19 +49,21 @@
             // 
             this.PickUpSignInListTable.AllowUserToAddRows = false;
             this.PickUpSignInListTable.AllowUserToDeleteRows = false;
+            this.PickUpSignInListTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.PickUpSignInListTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PickUpSignInListTable.Location = new System.Drawing.Point(139, 161);
+            this.PickUpSignInListTable.Location = new System.Drawing.Point(36, 159);
             this.PickUpSignInListTable.Name = "PickUpSignInListTable";
             this.PickUpSignInListTable.ReadOnly = true;
             this.PickUpSignInListTable.ShowEditingIcon = false;
-            this.PickUpSignInListTable.Size = new System.Drawing.Size(150, 150);
+            this.PickUpSignInListTable.Size = new System.Drawing.Size(799, 150);
             this.PickUpSignInListTable.TabIndex = 2;
+            this.PickUpSignInListTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Select);
             // 
             // EnterDay
             // 
-            this.EnterDay.Location = new System.Drawing.Point(164, 82);
+            this.EnterDay.Location = new System.Drawing.Point(36, 79);
             this.EnterDay.Name = "EnterDay";
-            this.EnterDay.Size = new System.Drawing.Size(75, 23);
+            this.EnterDay.Size = new System.Drawing.Size(97, 23);
             this.EnterDay.TabIndex = 3;
             this.EnterDay.Text = "Enter Day";
             this.EnterDay.UseVisualStyleBackColor = true;
@@ -69,7 +71,7 @@
             // 
             // DayNumber
             // 
-            this.DayNumber.Location = new System.Drawing.Point(257, 84);
+            this.DayNumber.Location = new System.Drawing.Point(139, 81);
             this.DayNumber.Name = "DayNumber";
             this.DayNumber.Size = new System.Drawing.Size(32, 20);
             this.DayNumber.TabIndex = 4;
