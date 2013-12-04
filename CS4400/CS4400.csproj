@@ -57,6 +57,12 @@
     <Compile Include="BagList.Designer.cs">
       <DependentUpon>BagList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FamilyMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FamilyMembers.Designer.cs">
+      <DependentUpon>FamilyMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,12 @@
     </Compile>
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewClient.Designer.cs">
+      <DependentUpon>NewClient.cs</DependentUpon>
     </Compile>
     <Compile Include="PickupConfirmation.cs">
       <SubType>Form</SubType>
@@ -101,6 +113,9 @@
     <EmbeddedResource Include="BagList.resx">
       <DependentUpon>BagList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FamilyMembers.resx">
+      <DependentUpon>FamilyMembers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewClient.resx">
+      <DependentUpon>NewClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PickupConfirmation.resx">
       <DependentUpon>PickupConfirmation.cs</DependentUpon>

@@ -79,5 +79,11 @@ namespace CS4400
             Program.HomeForm.Hide();
             Program.LogInForm.Show();
         }
+
+        private void NewClientClicked(object sender, EventArgs e)
+        {
+            Program.HomeForm.Hide();
+            Program.NewClient.Show();
+        }
     }
 }

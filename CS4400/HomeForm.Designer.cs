@@ -116,6 +116,7 @@
             this.NewClient.TabIndex = 7;
             this.NewClient.Text = "New Client";
             this.NewClient.UseVisualStyleBackColor = true;
+            this.NewClient.Click += new System.EventHandler(this.NewClientClicked);
             // 
             // HomeForm
             // 
