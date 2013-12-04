@@ -33,11 +33,15 @@
             this.ReturnToPickupSignInList = new System.Windows.Forms.Button();
             this.CompletePickup = new System.Windows.Forms.Button();
             this.AreYouSure = new System.Windows.Forms.Label();
+            this.NameLabel = new System.Windows.Forms.Label();
+            this.DateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BagContents)).BeginInit();
             this.SuspendLayout();
             // 
             // BagContents
             // 
+            this.BagContents.AllowUserToAddRows = false;
+            this.BagContents.AllowUserToDeleteRows = false;
             this.BagContents.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.BagContents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BagContents.Location = new System.Drawing.Point(140, 99);
@@ -83,11 +87,32 @@
             this.AreYouSure.Size = new System.Drawing.Size(0, 13);
             this.AreYouSure.TabIndex = 4;
             // 
+            // NameLabel
+            // 
+            this.NameLabel.AutoSize = true;
+            this.NameLabel.Location = new System.Drawing.Point(137, 53);
+            this.NameLabel.Name = "NameLabel";
+            this.NameLabel.Size = new System.Drawing.Size(35, 13);
+            this.NameLabel.TabIndex = 5;
+            this.NameLabel.Text = "Name";
+            // 
+            // DateLabel
+            // 
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.Location = new System.Drawing.Point(320, 53);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(30, 13);
+            this.DateLabel.TabIndex = 6;
+            this.DateLabel.Text = "Date";
+            this.DateLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
             // PickupConfirmation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 521);
+            this.Controls.Add(this.DateLabel);
+            this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.AreYouSure);
             this.Controls.Add(this.CompletePickup);
             this.Controls.Add(this.ReturnToPickupSignInList);
@@ -109,5 +134,7 @@
         private System.Windows.Forms.Button ReturnToPickupSignInList;
         private System.Windows.Forms.Button CompletePickup;
         private System.Windows.Forms.Label AreYouSure;
+        private System.Windows.Forms.Label NameLabel;
+        private System.Windows.Forms.Label DateLabel;
     }
 }
