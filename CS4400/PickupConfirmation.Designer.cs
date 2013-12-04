@@ -46,6 +46,7 @@
             this.BagContents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BagContents.Location = new System.Drawing.Point(140, 99);
             this.BagContents.Name = "BagContents";
+            this.BagContents.ReadOnly = true;
             this.BagContents.Size = new System.Drawing.Size(303, 262);
             this.BagContents.TabIndex = 0;
             // 
