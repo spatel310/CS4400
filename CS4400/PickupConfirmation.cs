@@ -57,8 +57,14 @@ namespace CS4400
 
             if (day != DateTime.Today.Day)
             {
-                DialogResult cancel = MessageBox.Show("Are you sure you want to Pickup your bag on the wrong day?");
+                DialogResult cancel = MessageBox.Show("Sorry! You can only pickup on the day you are registered to pickup!");
+                return;
             }
+            else
+            {
+
+            }
+
 
             Program.CloseConnection();
         }

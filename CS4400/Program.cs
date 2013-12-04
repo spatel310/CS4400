@@ -33,6 +33,7 @@ namespace CS4400
         public static BagList BagList;
         public static BagDropoff BagDropoff;
         public static SearchClientList SearchClientList;
+        public static NewClient NewClient;
 
         [STAThread]
         static void Main()
@@ -57,6 +58,7 @@ namespace CS4400
             BagDropoff = new BagDropoff();
             PickupSignInList = new PickupSignInList();
             SearchClientList = new SearchClientList();
+            NewClient = new NewClient();
 
 
             MainForm.IsMdiContainer = true;
@@ -67,7 +69,7 @@ namespace CS4400
             BagList.MdiParent = MainForm;
             BagDropoff.MdiParent = MainForm;
             SearchClientList.MdiParent = MainForm;
-
+            NewClient.MdiParent = MainForm;
 
             LogInForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             HomeForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -75,6 +77,7 @@ namespace CS4400
             BagList.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             BagDropoff.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             SearchClientList.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            NewClient.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
 
             Application.Run(MainForm);
