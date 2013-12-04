@@ -63,21 +63,32 @@ namespace CS4400
 
         private void CompletePickupClicked(object sender, EventArgs e)
         {
+            //check to see if client is picking up on correct day
             string cidCmd = String.Format("SELECT PDay FROM Client WHERE CID = {0}", PickupSignInList.CurrentClient);
             Program.OpenConnection();
             MySqlCommand getcommand = new MySqlCommand(cidCmd, Program.connection);
             int day = Convert.ToInt16(getcommand.ExecuteScalar());
 
+            //check to see if the client already picked up a bag today
+            string checkCmd = String.Format("SELECT CID, PDate FROM PickUp x NATURAL JOIN PickUpTransaction y WHERE x.PID = y.PID AND x.CID = {0} AND y.PDate = CurDate()", PickupSignInList.CurrentClient);
+            MySqlCommand check2Pickups = new MySqlCommand(checkCmd, Program.connection);
+
+
+            //checks to see if the date is correct and if the client hasnt picked up their bag already
             if (day != DateTime.Today.Day)
             {
                 DialogResult cancel = MessageBox.Show("Are you sure you want to Pickup your bag on the wrong day?");
             }
+            else if (check2Pickups.ExecuteScalar() != null)
+            {
+                DialogResult cancel = MessageBox.Show("Client already picked up a bag today!");
+            }
             else
             {
-                //try
-                //{
+                try
+                {
                     //insert into pickuptransaction
-                    string insertIntoPickUpTransaction = String.Format("INSERT INTO PickUpTransaction VALUES(DEFAULT, CURDATE())");
+                    string insertIntoPickUpTransaction = "INSERT INTO PickUpTransaction VALUES(DEFAULT, CURDATE())";
                     MySqlCommand insertIntoPUT = new MySqlCommand(insertIntoPickUpTransaction, Program.connection);
                     insertIntoPUT.ExecuteNonQuery();
 
@@ -93,16 +104,16 @@ namespace CS4400
 
                     //insert into pickup
                     Debug.Print("things are happening...");
-                    string pickUpTransactionCmd = String.Format("INSERT INTO PickUp(CID, PID, BagName) VALUES({0},{1},{2})", PickupSignInList.CurrentClient, maxPID, bagName);
+                    string pickUpTransactionCmd = String.Format("INSERT INTO PickUp VALUES({0},{1},\"{2}\")", PickupSignInList.CurrentClient, maxPID, bagName);
                     MySqlCommand insertIntoPU = new MySqlCommand(pickUpTransactionCmd, Program.connection);
                     insertIntoPU.ExecuteNonQuery();
 
                     DialogResult pickup = MessageBox.Show("Pickup Successful!");
-                //}
-                //catch
-                //{
-                //    dialogresult pickup = messagebox.show("pickup unsuccessful!");
-                //}
+                }
+                catch
+                {
+                    DialogResult pickup = MessageBox.Show("pickup unsuccessful!");
+                }
 
             }
             Program.CloseConnection();
