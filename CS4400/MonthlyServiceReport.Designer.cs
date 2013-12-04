@@ -1,6 +1,6 @@
 ﻿namespace CS4400
 {
-    partial class ServiceReport
+    partial class MonthlyServiceReport
     {
         /// <summary>
         /// Required designer variable.

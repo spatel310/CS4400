@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace CS4400
 {
-    public partial class ServiceReport : Form
+    public partial class MonthlyServiceReport : Form
     {
-        public ServiceReport()
+        public MonthlyServiceReport()
         {
             InitializeComponent();
+            try
+            {
+            }
+            catch
+            {
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
