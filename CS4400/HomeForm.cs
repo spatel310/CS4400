@@ -66,7 +66,8 @@ namespace CS4400
 
         private void ServiceReportClicked(object sender, EventArgs e)
         {
-
+            Program.HomeForm.Hide();
+            Program.ServiceReport.Show();
         }
 
         private void ProductsClicked(object sender, EventArgs e)

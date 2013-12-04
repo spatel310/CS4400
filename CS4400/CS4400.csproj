@@ -63,6 +63,12 @@
     <Compile Include="FamilyMembers.Designer.cs">
       <DependentUpon>FamilyMembers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServiceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceReport.Designer.cs">
+      <DependentUpon>ServiceReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </Compile>
     <EmbeddedResource Include="SearchClientList.resx">
       <DependentUpon>SearchClientList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceReport.resx">
+      <DependentUpon>ServiceReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

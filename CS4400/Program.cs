@@ -34,6 +34,7 @@ namespace CS4400
         public static BagDropoff BagDropoff;
         public static SearchClientList SearchClientList;
         public static NewClient NewClient;
+        
 
         [STAThread]
         static void Main()
@@ -78,6 +79,7 @@ namespace CS4400
             BagDropoff.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             SearchClientList.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             NewClient.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+           
 
 
             Application.Run(MainForm);
