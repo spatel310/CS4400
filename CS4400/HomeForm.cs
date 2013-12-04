@@ -72,7 +72,8 @@ namespace CS4400
 
         private void ProductsClicked(object sender, EventArgs e)
         {
-
+            Program.HomeForm.Hide();
+            Program.Products.Show();
         }
 
         private void LogoutClicked(object sender, EventArgs e)

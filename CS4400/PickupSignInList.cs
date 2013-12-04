@@ -18,8 +18,6 @@ namespace CS4400
         public PickupSignInList()
         {
             InitializeComponent();
-
-
             //MySqlDataAdapter sda = new MySqlDataAdapter("SELECT LastName, FirstName, FamilyMemberTotal, CONCAT( Street, \", \" , City, \", \" , State, \" \", Zip, \" \",  Apt) AS Address, Phone, Pday AS PickUpDay FROM Client NATURAL JOIN FamilyCountComplete  WHERE Pday = Day(current_date)", Program.connection);
 
             try

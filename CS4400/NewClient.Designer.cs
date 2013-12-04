@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.BagType = new System.Windows.Forms.TextBox();
             this.PickUpDay = new System.Windows.Forms.TextBox();
             this.FirstName = new System.Windows.Forms.TextBox();
             this.LastName = new System.Windows.Forms.TextBox();
@@ -50,7 +49,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.FinAid = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.Telephone = new System.Windows.Forms.TextBox();
@@ -59,6 +57,8 @@
             this.CreateClient = new System.Windows.Forms.Button();
             this.DOB = new System.Windows.Forms.DateTimePicker();
             this.Start = new System.Windows.Forms.DateTimePicker();
+            this.FinAid = new System.Windows.Forms.ComboBox();
+            this.BagName = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // ReturnHome
@@ -106,13 +106,6 @@
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 5;
             this.label4.Text = "Last Name";
-            // 
-            // BagType
-            // 
-            this.BagType.Location = new System.Drawing.Point(272, 35);
-            this.BagType.Name = "BagType";
-            this.BagType.Size = new System.Drawing.Size(100, 20);
-            this.BagType.TabIndex = 11;
             // 
             // PickUpDay
             // 
@@ -240,13 +233,6 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "City";
             // 
-            // FinAid
-            // 
-            this.FinAid.Location = new System.Drawing.Point(272, 369);
-            this.FinAid.Name = "FinAid";
-            this.FinAid.Size = new System.Drawing.Size(100, 20);
-            this.FinAid.TabIndex = 34;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -314,16 +300,47 @@
             this.Start.Size = new System.Drawing.Size(200, 20);
             this.Start.TabIndex = 40;
             // 
+            // FinAid
+            // 
+            this.FinAid.FormattingEnabled = true;
+            this.FinAid.Items.AddRange(new object[] {
+            "Food Stamps ",
+            "Obamas Food",
+            "State Food Stamps",
+            "Georgia Fewd"});
+            this.FinAid.Location = new System.Drawing.Point(272, 368);
+            this.FinAid.Name = "FinAid";
+            this.FinAid.Size = new System.Drawing.Size(121, 21);
+            this.FinAid.TabIndex = 41;
+            // 
+            // BagName
+            // 
+            this.BagName.FormattingEnabled = true;
+            this.BagName.Items.AddRange(new object[] {
+            "Individual",
+            "Family of Two ",
+            "Family of Three",
+            "Family of Four",
+            "Family of Five",
+            "Family of Size",
+            "Family of seven",
+            "Family of Eight"});
+            this.BagName.Location = new System.Drawing.Point(272, 30);
+            this.BagName.Name = "BagName";
+            this.BagName.Size = new System.Drawing.Size(121, 21);
+            this.BagName.TabIndex = 42;
+            // 
             // NewClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 512);
+            this.Controls.Add(this.BagName);
+            this.Controls.Add(this.FinAid);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.DOB);
             this.Controls.Add(this.CreateClient);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.FinAid);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.Telephone);
@@ -344,7 +361,6 @@
             this.Controls.Add(this.LastName);
             this.Controls.Add(this.FirstName);
             this.Controls.Add(this.PickUpDay);
-            this.Controls.Add(this.BagType);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -365,7 +381,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox BagType;
         private System.Windows.Forms.TextBox PickUpDay;
         private System.Windows.Forms.TextBox FirstName;
         private System.Windows.Forms.TextBox LastName;
@@ -382,7 +397,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox FinAid;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox Telephone;
@@ -391,5 +405,7 @@
         private System.Windows.Forms.Button CreateClient;
         private System.Windows.Forms.DateTimePicker DOB;
         private System.Windows.Forms.DateTimePicker Start;
+        private System.Windows.Forms.ComboBox FinAid;
+        private System.Windows.Forms.ComboBox BagName;
     }
 }
