@@ -197,9 +197,6 @@
     <EmbeddedResource Include="SearchClientList.resx">
       <DependentUpon>SearchClientList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MonthlyServiceReport.resx">
-      <DependentUpon>MonthlyServiceReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ViewBag.resx">
       <DependentUpon>ViewBag.cs</DependentUpon>
     </EmbeddedResource>

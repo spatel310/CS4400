@@ -69,7 +69,7 @@ namespace CS4400
         private void ReturnToBagListClicked(object sender, EventArgs e)
         {
             this.Close();
-            Program.BagList.Refresh();
+            Program.BagList.RefreshForm();
             Program.BagList.Show();
         }
 
@@ -86,6 +86,7 @@ namespace CS4400
                 string quantity = "";
                 string updateProduct = "";
                 MySqlCommand cmd;
+                Program.OpenConnection();
                 for (int rows = 0; rows < EditBagTable.Rows.Count - 1; rows++)
                 {
                     product = EditBagTable.Rows[rows].Cells[0].Value.ToString();
@@ -94,7 +95,7 @@ namespace CS4400
                     updateProduct = String.Format("UPDATE Holds SET CurrentMonthQty={0} WHERE ProductName = \"{1}\" AND BagName = \"{2}\"", quantity, product, BagList.currentBagName);
 
                     //create DropOffTransaction on today's date
-                    Program.OpenConnection();
+                    
                     cmd = new MySqlCommand(updateProduct, Program.connection);
                     cmd.ExecuteNonQuery();
 
@@ -102,21 +103,21 @@ namespace CS4400
 
                 if (newProduct1.SelectedIndex > -1)
                 {
-                    String addProd = string.Format("INSERT INTO Holds(BagName, ProductName, CurrentMonthQty, LastMonthQty) VALUES(\"{0}\",\"{1}\",{2},{3})", BagList.currentBagName, newProduct1.SelectedItem.ToString(), newProd1Quant.Text, 0);
+                    String addProd = string.Format("INSERT INTO Holds VALUES(\"{0}\",\"{1}\",{2},{3})", BagList.currentBagName, newProduct1.SelectedItem.ToString(), newProd1Quant.Text, 0);
                     Debug.Print(addProd);
-                    cmd = new MySqlCommand(updateProduct, Program.connection);
+                    cmd = new MySqlCommand(addProd, Program.connection);
                     cmd.ExecuteNonQuery();
                 } 
                 if (newProduct2.SelectedIndex > -1)
                 {
-                    String addProd = string.Format("INSERT INTO Holds(BagName, ProductName, CurrentMonthQty, LastMonthQty) VALUES(\"{0}\",\"{1}\",{2},{3})", BagList.currentBagName, newProduct2.SelectedItem.ToString(), newProd2Quant.Text, 0);
-                    cmd = new MySqlCommand(updateProduct, Program.connection);
+                    String addProd = string.Format("INSERT INTO Holds VALUES(\"{0}\",\"{1}\",{2},{3})", BagList.currentBagName, newProduct2.SelectedItem.ToString(), newProd2Quant.Text, 0);
+                    cmd = new MySqlCommand(addProd, Program.connection);
                     cmd.ExecuteNonQuery();
                 } 
                 if (newProduct3.SelectedIndex > -1)
                 {
-                    String addProd = string.Format("INSERT INTO Holds(BagName, ProductName, CurrentMonthQty, LastMonthQty) VALUES(\"{0}\",\"{1}\",{2},{3})", BagList.currentBagName, newProduct3.SelectedItem.ToString(), newProd3Quant.Text, 0);
-                    cmd = new MySqlCommand(updateProduct, Program.connection);
+                    String addProd = string.Format("INSERT INTO Holds VALUES(\"{0}\",\"{1}\",{2},{3})", BagList.currentBagName, newProduct3.SelectedItem.ToString(), newProd3Quant.Text, 0);
+                    cmd = new MySqlCommand(addProd, Program.connection);
                     cmd.ExecuteNonQuery();
                 }
                 Program.CloseConnection();
