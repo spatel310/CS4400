@@ -57,6 +57,12 @@
     <Compile Include="BagList.Designer.cs">
       <DependentUpon>BagList.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditBag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditBag.Designer.cs">
+      <DependentUpon>EditBag.cs</DependentUpon>
+    </Compile>
     <Compile Include="FamilyMembers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,11 +125,20 @@
     <Compile Include="SearchClientList.Designer.cs">
       <DependentUpon>SearchClientList.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewBag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewBag.Designer.cs">
+      <DependentUpon>ViewBag.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BagDropoff.resx">
       <DependentUpon>BagDropoff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BagList.resx">
       <DependentUpon>BagList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditBag.resx">
+      <DependentUpon>EditBag.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FamilyMembers.resx">
       <DependentUpon>FamilyMembers.cs</DependentUpon>
@@ -163,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MonthlyServiceReport.resx">
       <DependentUpon>MonthlyServiceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewBag.resx">
+      <DependentUpon>ViewBag.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

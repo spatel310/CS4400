@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.ReturnHome = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.BagListTable = new System.Windows.Forms.DataGridView();
+            this.ViewBag = new System.Windows.Forms.Button();
+            this.EditBag = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.BagListTable)).BeginInit();
             this.SuspendLayout();
             // 
             // ReturnHome
@@ -42,24 +45,50 @@
             this.ReturnHome.UseVisualStyleBackColor = true;
             this.ReturnHome.Click += new System.EventHandler(this.ReturnHomeClicked);
             // 
-            // listBox1
+            // BagListTable
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(214, 176);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 95);
-            this.listBox1.TabIndex = 1;
+            this.BagListTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BagListTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BagListTable.Location = new System.Drawing.Point(46, 56);
+            this.BagListTable.Name = "BagListTable";
+            this.BagListTable.ReadOnly = true;
+            this.BagListTable.Size = new System.Drawing.Size(639, 329);
+            this.BagListTable.TabIndex = 1;
+            this.BagListTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BagSelected);
+            // 
+            // ViewBag
+            // 
+            this.ViewBag.Location = new System.Drawing.Point(62, 407);
+            this.ViewBag.Name = "ViewBag";
+            this.ViewBag.Size = new System.Drawing.Size(75, 23);
+            this.ViewBag.TabIndex = 2;
+            this.ViewBag.Text = "View Bag";
+            this.ViewBag.UseVisualStyleBackColor = true;
+            this.ViewBag.Click += new System.EventHandler(this.ViewBagClicked);
+            // 
+            // EditBag
+            // 
+            this.EditBag.Location = new System.Drawing.Point(176, 407);
+            this.EditBag.Name = "EditBag";
+            this.EditBag.Size = new System.Drawing.Size(75, 23);
+            this.EditBag.TabIndex = 3;
+            this.EditBag.Text = "Edit Bag";
+            this.EditBag.UseVisualStyleBackColor = true;
+            this.EditBag.Click += new System.EventHandler(this.EditBagClicked);
             // 
             // BagList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 512);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.EditBag);
+            this.Controls.Add(this.ViewBag);
+            this.Controls.Add(this.BagListTable);
             this.Controls.Add(this.ReturnHome);
             this.Name = "BagList";
             this.Text = "BagList";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.BagListTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -67,6 +96,8 @@
         #endregion
 
         private System.Windows.Forms.Button ReturnHome;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.DataGridView BagListTable;
+        private System.Windows.Forms.Button ViewBag;
+        private System.Windows.Forms.Button EditBag;
     }
 }

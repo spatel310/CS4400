@@ -46,7 +46,10 @@ namespace CS4400
 
                 Program.CloseConnection();
 
+                //show the family member form
                 FamilyMembers famForm = new FamilyMembers();
+                famForm.MdiParent = Program.MainForm;
+                famForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
                 Program.NewClient.Hide();
                 famForm.Show();
             }

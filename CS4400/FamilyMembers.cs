@@ -53,7 +53,8 @@ namespace CS4400
                    
                 } 
                 Program.CloseConnection();
-                Result.Text = "Family Members Added Successfully!";
+              //  Result.Text = "Family Members Added Successfully!";
+                DialogResult cancel = MessageBox.Show("Family Members Added Successfully!");
             }
             catch
             {
