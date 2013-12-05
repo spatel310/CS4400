@@ -23,8 +23,6 @@ namespace CS4400
             try
             {
                 MySqlDataAdapter sda = new MySqlDataAdapter("SELECT b.BagName, NumItems, IFNULL(NumClientsBag,0) AS NumClientsBag, IFNULL(CostOfBag,0.00) AS CostOfBag FROM BagStats b LEFT JOIN ClientsPerBag c ON b.BagName = c.BagName", Program.connection);
-
-
                 Program.OpenConnection();
                 DataSet ds = new DataSet();
                 sda.Fill(ds);

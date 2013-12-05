@@ -29,30 +29,32 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ServiceReport = new System.Windows.Forms.DataGridView();
             this.ReturnHome = new System.Windows.Forms.Button();
             this.Active = new System.Windows.Forms.Button();
             this.LastMonth = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceReport)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 52);
+            this.label1.Location = new System.Drawing.Point(25, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Monthly Service Report";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView1
+            // ServiceReport
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(107, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(576, 337);
-            this.dataGridView1.TabIndex = 1;
+            this.ServiceReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ServiceReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ServiceReport.Location = new System.Drawing.Point(28, 80);
+            this.ServiceReport.Name = "ServiceReport";
+            this.ServiceReport.ReadOnly = true;
+            this.ServiceReport.Size = new System.Drawing.Size(672, 337);
+            this.ServiceReport.TabIndex = 1;
             // 
             // ReturnHome
             // 
@@ -66,7 +68,7 @@
             // 
             // Active
             // 
-            this.Active.Location = new System.Drawing.Point(306, 52);
+            this.Active.Location = new System.Drawing.Point(305, 51);
             this.Active.Name = "Active";
             this.Active.Size = new System.Drawing.Size(75, 23);
             this.Active.TabIndex = 3;
@@ -92,12 +94,12 @@
             this.Controls.Add(this.LastMonth);
             this.Controls.Add(this.Active);
             this.Controls.Add(this.ReturnHome);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ServiceReport);
             this.Controls.Add(this.label1);
             this.Name = "MoServiceReport";
             this.Text = "Monthly Service Report";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServiceReport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +108,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ServiceReport;
         private System.Windows.Forms.Button ReturnHome;
         private System.Windows.Forms.Button Active;
         private System.Windows.Forms.Button LastMonth;
