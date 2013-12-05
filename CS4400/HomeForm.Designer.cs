@@ -36,6 +36,7 @@
             this.Products = new System.Windows.Forms.Button();
             this.Logout = new System.Windows.Forms.Button();
             this.NewClient = new System.Windows.Forms.Button();
+            this.GroceryList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Pickups
@@ -118,11 +119,22 @@
             this.NewClient.UseVisualStyleBackColor = true;
             this.NewClient.Click += new System.EventHandler(this.NewClientClicked);
             // 
+            // GroceryList
+            // 
+            this.GroceryList.Location = new System.Drawing.Point(418, 274);
+            this.GroceryList.Name = "GroceryList";
+            this.GroceryList.Size = new System.Drawing.Size(75, 23);
+            this.GroceryList.TabIndex = 8;
+            this.GroceryList.Text = "Grocery List";
+            this.GroceryList.UseVisualStyleBackColor = true;
+            this.GroceryList.Click += new System.EventHandler(this.GroceryList_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 512);
+            this.Controls.Add(this.GroceryList);
             this.Controls.Add(this.NewClient);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Products);
@@ -149,6 +161,7 @@
         private System.Windows.Forms.Button Products;
         private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Button NewClient;
+        private System.Windows.Forms.Button GroceryList;
 
     }
 }

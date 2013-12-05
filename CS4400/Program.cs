@@ -36,6 +36,7 @@ namespace CS4400
         public static NewClient NewClient;
         public static Products Products;
         public static MoServiceReport MoServiceReport;
+        public static GroceryList GroceryList;
        
 
 
@@ -65,6 +66,7 @@ namespace CS4400
             NewClient = new NewClient();
             Products = new Products();
             MoServiceReport = new MoServiceReport();
+            GroceryList = new GroceryList();
 
 
             MainForm.IsMdiContainer = true;
@@ -78,6 +80,7 @@ namespace CS4400
             NewClient.MdiParent = MainForm;
             Products.MdiParent = MainForm;
             MoServiceReport.MdiParent = MainForm;
+            GroceryList.MdiParent = MainForm;
 
             LogInForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             HomeForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -88,6 +91,7 @@ namespace CS4400
             NewClient.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Products.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             MoServiceReport.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            GroceryList.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
 
             Application.Run(MainForm);

@@ -63,6 +63,12 @@
     <Compile Include="FamilyMembers.Designer.cs">
       <DependentUpon>FamilyMembers.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroceryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroceryList.Designer.cs">
+      <DependentUpon>GroceryList.cs</DependentUpon>
+    </Compile>
     <Compile Include="MoServiceReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FamilyMembers.resx">
       <DependentUpon>FamilyMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroceryList.resx">
+      <DependentUpon>GroceryList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoServiceReport.resx">
       <DependentUpon>MoServiceReport.cs</DependentUpon>
