@@ -37,6 +37,7 @@
             this.CostPerUnitTB = new System.Windows.Forms.TextBox();
             this.SourceTB = new System.Windows.Forms.TextBox();
             this.ReturnToProducts = new System.Windows.Forms.Button();
+            this.ReturnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SaveProduct
@@ -116,11 +117,22 @@
             this.ReturnToProducts.UseVisualStyleBackColor = true;
             this.ReturnToProducts.Click += new System.EventHandler(this.ReturnToProductsClicked);
             // 
+            // ReturnHome
+            // 
+            this.ReturnHome.Location = new System.Drawing.Point(526, 47);
+            this.ReturnHome.Name = "ReturnHome";
+            this.ReturnHome.Size = new System.Drawing.Size(124, 23);
+            this.ReturnHome.TabIndex = 9;
+            this.ReturnHome.Text = "Return Home";
+            this.ReturnHome.UseVisualStyleBackColor = true;
+            this.ReturnHome.Click += new System.EventHandler(this.ReturnHomeClicked);
+            // 
             // NewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 512);
+            this.Controls.Add(this.ReturnHome);
             this.Controls.Add(this.ReturnToProducts);
             this.Controls.Add(this.SourceTB);
             this.Controls.Add(this.CostPerUnitTB);
@@ -149,5 +161,6 @@
         private System.Windows.Forms.TextBox CostPerUnitTB;
         private System.Windows.Forms.TextBox SourceTB;
         private System.Windows.Forms.Button ReturnToProducts;
+        private System.Windows.Forms.Button ReturnHome;
     }
 }

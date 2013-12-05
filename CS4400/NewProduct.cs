@@ -51,5 +51,11 @@ namespace CS4400
             Program.Products.Show();
         }
 
+        private void ReturnHomeClicked(object sender, EventArgs e)
+        {
+            this.Close();
+            Program.HomeForm.Show();
+        }
+
     }
 }
