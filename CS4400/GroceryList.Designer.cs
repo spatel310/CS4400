@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.ReturnHome = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GroceryTable = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.GroceryTable)).BeginInit();
             this.SuspendLayout();
             // 
             // ReturnHome
@@ -44,13 +45,13 @@
             this.ReturnHome.UseVisualStyleBackColor = true;
             this.ReturnHome.Click += new System.EventHandler(this.ReturnHome_Click);
             // 
-            // dataGridView1
+            // GroceryTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(107, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(576, 337);
-            this.dataGridView1.TabIndex = 1;
+            this.GroceryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GroceryTable.Location = new System.Drawing.Point(107, 83);
+            this.GroceryTable.Name = "GroceryTable";
+            this.GroceryTable.Size = new System.Drawing.Size(576, 337);
+            this.GroceryTable.TabIndex = 1;
             // 
             // label1
             // 
@@ -61,18 +62,28 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Grocery List";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(577, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "November 2013";
+            // 
             // GroceryList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 512);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GroceryTable);
             this.Controls.Add(this.ReturnHome);
             this.Name = "GroceryList";
             this.Text = "GroceryList";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroceryTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,7 +92,8 @@
         #endregion
 
         private System.Windows.Forms.Button ReturnHome;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GroceryTable;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
