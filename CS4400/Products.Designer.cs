@@ -28,21 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ProductSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ProductNameLabel = new System.Windows.Forms.Label();
             this.ListAllProducts = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.ProductsTable = new System.Windows.Forms.DataGridView();
+            this.ReturnHome = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.Button();
+            this.CreateProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsTable)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // ProductSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(188, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.ProductSearch.Location = new System.Drawing.Point(188, 85);
+            this.ProductSearch.Name = "ProductSearch";
+            this.ProductSearch.Size = new System.Drawing.Size(100, 20);
+            this.ProductSearch.TabIndex = 0;
             // 
             // label1
             // 
@@ -70,11 +73,12 @@
             this.ListAllProducts.TabIndex = 4;
             this.ListAllProducts.Text = "List All Products";
             this.ListAllProducts.UseVisualStyleBackColor = true;
+            this.ListAllProducts.Click += new System.EventHandler(this.ListAllProductsClicked);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(104, 54);
+            this.label2.Location = new System.Drawing.Point(104, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 5;
@@ -82,25 +86,64 @@
             // 
             // ProductsTable
             // 
+            this.ProductsTable.AllowUserToAddRows = false;
+            this.ProductsTable.AllowUserToDeleteRows = false;
+            this.ProductsTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProductsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductsTable.Location = new System.Drawing.Point(107, 124);
+            this.ProductsTable.Location = new System.Drawing.Point(107, 161);
             this.ProductsTable.Name = "ProductsTable";
-            this.ProductsTable.Size = new System.Drawing.Size(240, 150);
+            this.ProductsTable.ReadOnly = true;
+            this.ProductsTable.Size = new System.Drawing.Size(642, 281);
             this.ProductsTable.TabIndex = 6;
+            // 
+            // ReturnHome
+            // 
+            this.ReturnHome.Location = new System.Drawing.Point(719, 39);
+            this.ReturnHome.Name = "ReturnHome";
+            this.ReturnHome.Size = new System.Drawing.Size(94, 23);
+            this.ReturnHome.TabIndex = 7;
+            this.ReturnHome.Text = "Return Home";
+            this.ReturnHome.UseVisualStyleBackColor = true;
+            this.ReturnHome.Click += new System.EventHandler(this.ReturnHomeClicked);
+            // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(188, 122);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(100, 23);
+            this.Search.TabIndex = 8;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.SearchClicked);
+            // 
+            // CreateProduct
+            // 
+            this.CreateProduct.Location = new System.Drawing.Point(323, 122);
+            this.CreateProduct.Name = "CreateProduct";
+            this.CreateProduct.Size = new System.Drawing.Size(99, 23);
+            this.CreateProduct.TabIndex = 9;
+            this.CreateProduct.Text = "Create Product";
+            this.CreateProduct.UseVisualStyleBackColor = true;
+            this.CreateProduct.Click += new System.EventHandler(this.CreateProductClicked);
             // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(934, 512);
+            this.Controls.Add(this.CreateProduct);
+            this.Controls.Add(this.Search);
+            this.Controls.Add(this.ReturnHome);
             this.Controls.Add(this.ProductsTable);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ListAllProducts);
             this.Controls.Add(this.ProductNameLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ProductSearch);
             this.Name = "Products";
             this.Text = "Products";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ProductsTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -109,11 +152,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ProductSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ProductNameLabel;
         private System.Windows.Forms.Button ListAllProducts;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView ProductsTable;
+        private System.Windows.Forms.Button ReturnHome;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.Button CreateProduct;
     }
 }
