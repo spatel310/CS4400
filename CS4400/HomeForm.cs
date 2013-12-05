@@ -67,7 +67,7 @@ namespace CS4400
         private void ServiceReportClicked(object sender, EventArgs e)
         {
             Program.HomeForm.Hide();
-            Program.MonthlyServiceReport.Show();
+            Program.MoServiceReport.Show();
         }
 
         private void ProductsClicked(object sender, EventArgs e)
@@ -86,6 +86,13 @@ namespace CS4400
         {
             Program.HomeForm.Hide();
             Program.NewClient.Show();
+        }
+
+        private void GroceryList_Click(object sender, EventArgs e)
+        {
+            Program.HomeForm.Hide();
+            Program.GroceryList.Show();
+
         }
     }
 }

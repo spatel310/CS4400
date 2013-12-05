@@ -35,7 +35,8 @@ namespace CS4400
         public static SearchClientList SearchClientList;
         public static NewClient NewClient;
         public static Products Products;
-        public static MonthlyServiceReport MonthlyServiceReport;
+        public static MoServiceReport MoServiceReport;
+        public static GroceryList GroceryList;
        
 
 
@@ -64,7 +65,8 @@ namespace CS4400
             SearchClientList = new SearchClientList();
             NewClient = new NewClient();
             Products = new Products();
-            MonthlyServiceReport = new MonthlyServiceReport();
+            MoServiceReport = new MoServiceReport();
+            GroceryList = new GroceryList();
 
 
 
@@ -78,7 +80,8 @@ namespace CS4400
             SearchClientList.MdiParent = MainForm;
             NewClient.MdiParent = MainForm;
             Products.MdiParent = MainForm;
-            MonthlyServiceReport.MdiParent = MainForm;
+            MoServiceReport.MdiParent = MainForm;
+            GroceryList.MdiParent = MainForm;
 
             LogInForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             HomeForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -88,8 +91,8 @@ namespace CS4400
             SearchClientList.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             NewClient.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             Products.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            MonthlyServiceReport.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-
+            MoServiceReport.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            GroceryList.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
 
             Application.Run(MainForm);
