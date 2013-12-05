@@ -78,7 +78,7 @@ namespace CS4400
             if(DateTime.Today.Day != DateTime.DaysInMonth(DateTime.Today.Year, DateTime.Today.Month))
             {
                 MessageBox.Show("Sorry! You can't edit a bag unless it's the last day of the month!");
-
+                   
             }
             try
             {
