@@ -46,7 +46,7 @@ namespace CS4400
         private void ReturnToBagListClicked(object sender, EventArgs e)
         {
             this.Close();
-            Program.BagList.Refresh();
+            Program.BagList.RefreshForm();
             Program.BagList.Show();
         }
     }
