@@ -69,11 +69,23 @@
     <Compile Include="FamilyMembers.Designer.cs">
       <DependentUpon>FamilyMembers.cs</DependentUpon>
     </Compile>
-    <Compile Include="MonthlyServiceReport.cs">
+    <Compile Include="NewProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MonthlyServiceReport.Designer.cs">
-      <DependentUpon>MonthlyServiceReport.cs</DependentUpon>
+    <Compile Include="NewProduct.Designer.cs">
+      <DependentUpon>NewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroceryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroceryList.Designer.cs">
+      <DependentUpon>GroceryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoServiceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoServiceReport.Designer.cs">
+      <DependentUpon>MoServiceReport.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -142,6 +154,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FamilyMembers.resx">
       <DependentUpon>FamilyMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProduct.resx">
+      <DependentUpon>NewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroceryList.resx">
+      <DependentUpon>GroceryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoServiceReport.resx">
+      <DependentUpon>MoServiceReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>

@@ -17,26 +17,51 @@ namespace CS4400
         {
             InitializeComponent();
 
-            try
-            {
-                string initialCmd = String.Format("SELECT ProductName, ThisMoQuantity, Cost FROM ProductQuantities NATURAL JOIN Product");
-                MySqlDataAdapter sda = new MySqlDataAdapter(initialCmd, Program.connection);
-                Program.OpenConnection();
-                DataSet ds = new DataSet();
-                sda.Fill(ds);
-                ProductsTable.DataSource = ds.Tables[0].DefaultView;
-                Program.CloseConnection();
-            }
-            catch
-            {
-
-            }
-            
+            allProducts();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void ReturnHomeClicked(object sender, EventArgs e)
         {
+            Program.Products.Hide();
+            Program.HomeForm.Show();
+        }
 
+
+
+        public void allProducts()
+        {
+            string initialCmd = String.Format("SELECT ProductName, ThisMoQuantity, Cost FROM ProductQuantities NATURAL JOIN Product");
+            MySqlDataAdapter sda = new MySqlDataAdapter(initialCmd, Program.connection);
+            Program.OpenConnection();
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            ProductsTable.DataSource = ds.Tables[0].DefaultView;
+            Program.CloseConnection();
+        }
+
+        private void ListAllProductsClicked(object sender, EventArgs e)
+        {
+            allProducts();
+        }
+
+        private void CreateProductClicked(object sender, EventArgs e)
+        {
+            Program.Products.Hide();
+            NewProduct NewProduct = new NewProduct();
+            NewProduct.MdiParent = Program.MainForm;
+            NewProduct.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            NewProduct.Show();
+        }
+
+        private void SearchClicked(object sender, EventArgs e)
+        {
+            string initialCmd = String.Format("SELECT ProductName, ThisMoQuantity, Cost FROM ProductQuantities NATURAL JOIN Product WHERE ProductName = \"{0}\"", ProductSearch.Text);
+            MySqlDataAdapter sda = new MySqlDataAdapter(initialCmd, Program.connection);
+            Program.OpenConnection();
+            DataSet ds = new DataSet();
+            sda.Fill(ds);
+            ProductsTable.DataSource = ds.Tables[0].DefaultView;
+            Program.CloseConnection();
         }
     }
 }
