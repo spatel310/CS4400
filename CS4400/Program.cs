@@ -67,6 +67,7 @@ namespace CS4400
             MonthlyServiceReport = new MonthlyServiceReport();
 
 
+
             MainForm.IsMdiContainer = true;
 
             LogInForm.MdiParent = MainForm;

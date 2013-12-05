@@ -46,10 +46,11 @@ namespace CS4400
 
         private void CreateProductClicked(object sender, EventArgs e)
         {
-            //CreateProduct CreateProduct = new CreateProduct();
-            //CreateProduct.MdiParent = Program.MainForm;
-            //CreateProduct.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            //CreateProduct.Show();
+            Program.Products.Hide();
+            NewProduct NewProduct = new NewProduct();
+            NewProduct.MdiParent = Program.MainForm;
+            NewProduct.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            NewProduct.Show();
         }
 
         private void SearchClicked(object sender, EventArgs e)
